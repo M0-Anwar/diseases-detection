@@ -70,6 +70,7 @@ def validate_genome_data(df):
     return True, "Data validation successful"
 
 
+
 @app.route('/')
 def home():
     """Home page with API documentation"""
