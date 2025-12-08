@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import numpy as np
 import pandas as pd
 import tensorflow as tf
@@ -6,6 +7,8 @@ import joblib
 
 
 app = Flask(__name__)
+# Enable CORS so frontend can call this API from another origin
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # Global variables for model
 model = None
@@ -21,7 +24,7 @@ def load_model():
 
     try:
         # Load model
-        model = tf.keras.models.load_model('final_disease_model.h5')
+        model = tf.keras.models.load_model('final_disease_model.keras')
 
         # Load scaler
         scaler = joblib.load('disease_scaler.pkl')
