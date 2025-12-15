@@ -5,7 +5,7 @@ import Layout from "../components/layout/Layout"
 import AnalysisView from "../components/diagnose/AnalysisView"
 import { AnimatePresence, motion } from "framer-motion"
 
-const exampleMutations = ["rs7034200-A", "rs74577409-G", "rs150626020-T", "rs9967620-C", "rs6547692-A"]
+const exampleMutations = ["rs7034200-A", "rs74577409-G", "rs10069690-T", "rs9967620-C", "rs6547692-A"]
 
 export default function InputPage() {
     const [mutations, setMutations] = useState("")

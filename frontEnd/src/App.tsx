@@ -5,6 +5,7 @@ import About from "./pages/About"
 import InputPage from "./pages/InputPage"
 import ResultsPage from "./pages/ResultsPage"
 import DNAEducation from "./pages/DNAEducation"
+import ClinicalReportPage from "./components/diagnose/ClinicalReportPage";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
         <Route path="/diagnose" element={<InputPage />} />
         <Route path="/input" element={<InputPage />} />
         <Route path="/results" element={<ResultsPage />} />
+        <Route path="/mutation-detail/:diseaseId" element={<ClinicalReportPage />} />
       </Routes>
     </BrowserRouter>
   )

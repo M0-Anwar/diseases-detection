@@ -86,8 +86,8 @@ export default function Navbar() {
                     <div className="flex items-center gap-3 sm:gap-4">
                         <Link
                             to="/diagnose"
-                            className="hidden md:flex items-center gap-2 bg-primary text-white px-5 py-2 rounded-full text-sm font-semibold hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-primary/20"
-                        >
+                            className="hidden md:flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-500 text-white px-5 py-2 rounded-full text-sm font-semiboldtransition-all hover:shadow-lg hover:shadow-primary/20"
+                            >
                             Start Analysis
                         </Link>
                         <ThemeToggle />
