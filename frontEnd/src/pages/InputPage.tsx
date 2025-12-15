@@ -4,6 +4,7 @@ import { Send, AlertCircle, Terminal, FileCode } from "lucide-react"
 import Layout from "../components/layout/Layout"
 import AnalysisView from "../components/diagnose/AnalysisView"
 import { AnimatePresence, motion } from "framer-motion"
+import { API_BASE_URL } from "../lib/api"
 
 const exampleMutations = ["rs7034200-A", "rs74577409-G", "rs10069690-T", "rs9967620-C", "rs6547692-A"]
 
@@ -22,7 +23,7 @@ export default function InputPage() {
         setError(""); setLoading(true)
 
         try {
-            const response = await fetch("https://diseases-detection-wdqcoa.fly.dev/api/predict/list", {
+            const response = await fetch(`${API_BASE_URL}/predict/list`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ snp_list: mutationList })
