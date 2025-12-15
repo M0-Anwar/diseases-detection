@@ -5,13 +5,13 @@ FROM python:3.12-slim
 WORKDIR /app
 
 # Copy requirements first (caching optimization)
-COPY backend/requirements.txt .
+COPY requirements.txt .
 
 # Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the rest of your backend code
-COPY backend/ .
+COPY . .
 
 # Expose the port Render will use
 EXPOSE 10000
