@@ -23,7 +23,7 @@ export default function InputPage() {
         setError(""); setLoading(true)
 
         try {
-            const response = await fetch(`${API_BASE_URL}/predict/list`, {
+            const response = await fetch(`${API_BASE_URL}/api/predict/list`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ snp_list: mutationList })
